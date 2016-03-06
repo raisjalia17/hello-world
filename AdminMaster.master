@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="AdminMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <style type="text/css">
+        .parentContent
+        {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+        }
+        .mainContent
+        {
+            margin: auto;
+            padding: 0px;
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="parentContent">
+        <div class="mainContent">
+    <div>
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/images/imgres.jpg" Width="879px" />
+         <asp:Menu ID="Menu1" runat="server" BackColor="#343434" DynamicHorizontalOffset="2"
+                Font-Bold="True" Font-Names="Arial Narrow" Font-Size="Medium" ForeColor="White"
+                Height="41px" Orientation="Horizontal" StaticSubMenuIndent="10px" 
+                    Width="878px">
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                <DynamicMenuStyle BackColor="#F7F6F3" />
+                <StaticSelectedStyle BackColor="#5D7B9D" />
+                <DynamicSelectedStyle BackColor="#5D7B9D" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <Items>
+                   <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home">
+                    </asp:MenuItem>
+                     <asp:MenuItem NavigateUrl="~/ManageReports.aspx" Text="Reports" Value="Reports">
+                    </asp:MenuItem>
+                     <asp:MenuItem NavigateUrl="~/ManageStations.aspx" Text="Stations" Value="Stations">
+                    </asp:MenuItem>
+                     <asp:MenuItem NavigateUrl="~/ViewAssignedReports.aspx" Text="Assigned Reports" Value="Assigned Reports">
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Home.aspx" Target="Logout" Value="Logout">
+                    </asp:MenuItem>
+                    </Items>
+                    </asp:Menu>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                      
+                    
+        </asp:ContentPlaceHolder>
+
+        
+    </div>
+    </div>
+    </div>
+    </form>
+</body>
+</html>
